@@ -37,3 +37,10 @@ Thumbs.db
 
 # Misc
 *.sw?
+
+# Test coverage (opcional)
+coverage/
+
+# Otros lockfiles (usas pnpm)
+package-lock.json
+yarn.lock

@@ -1,0 +1,8 @@
+/* Estilos globales de la app */
+@import "tailwindcss";
+@import './variables.css';
+
+/* Variables  */
+@theme{
+    --color-sena-green: #009639;
+}
