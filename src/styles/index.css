@@ -4,5 +4,14 @@
 
 /* Variables  */
 @theme{
-    --color-sena-green: #009639;
+    --color-sena-green: #17cf17;
+    --color-sena-gray: #F6F8F6;
+}
+
+/* Falta colocar la fuente principal*/
+
+html {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
