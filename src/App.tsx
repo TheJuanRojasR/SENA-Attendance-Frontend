@@ -1,9 +1,5 @@
-// import { Input } from "./components/ui/Input/Input"
-
 function App() {
-  // return (
-  //   <Input/>
-  // )
+  // return ()
 }
 
 export default App

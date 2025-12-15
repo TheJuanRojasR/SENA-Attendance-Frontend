@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import styles from './Input.module.css'
-import ErrorIcon from '@/assets/icons/error.svg'
+import ErrorIcon from '@/assets/icons/error.svg?react'
 
 type InputType = 'text' | 'password' | 'email' | 'number' | 'file' | 'date' | 'search';
 
@@ -16,7 +16,7 @@ type InputProps = {
     isDisabled?: boolean;
     value: string;
     error?: string;
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;  // Por el momento no se para que funcionan
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;  // Por el momento no se para que funcionan
 }
 
 export function Input ({ id,
@@ -42,7 +42,7 @@ export function Input ({ id,
             <input className={`${styles.base} ${inputClassName}`} type={type} id={id} name={name} placeholder={placeholder} required={isRequired} disabled={isDisabled} value={value} onChange={onChange}/>
 
             {hasError && (
-                <div>
+                <div className={styles.errorContainer}>
                     <ErrorIcon />
                     <p className={styles.errorLabel}>{error}</p>
                 </div>
