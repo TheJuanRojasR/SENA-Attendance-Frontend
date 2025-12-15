@@ -1,9 +1,9 @@
-import { Button } from "./components/ui/Button/Button"
+// import { Input } from "./components/ui/Input/Input"
 
 function App() {
-  return (
-    <Button children="Cancelar" variant="primary"/>
-  )
+  // return (
+  //   <Input/>
+  // )
 }
 
 export default App
