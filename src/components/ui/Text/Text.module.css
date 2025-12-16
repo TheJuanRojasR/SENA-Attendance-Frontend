@@ -1,0 +1,35 @@
+.base {
+    /* Tipografía */
+    font-family: inherit;
+}
+
+.sm {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+}
+
+.md {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+}
+
+.lg {
+    font-size: var(--font-size-lg); 
+    line-height: var(--line-height-relaxed);
+}
+
+.default {
+    color: var(--color-primary-dark);
+}
+
+.black {
+    color: var(--color-black);
+}
+
+.success {
+    color: var(--color-primary);
+}
+
+.bold {
+    font-weight: var(--font-weight-semibold);
+}
