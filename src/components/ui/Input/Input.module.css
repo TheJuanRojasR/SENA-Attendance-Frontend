@@ -1,95 +1,117 @@
 .container {
+    /* Display y Layout */
     display: flex;
     flex-direction: column;
-    gap: 8px; /* por el momento */
-
-    margin: 10px; /* por el momento */
+    
+    /* Posicionamiento y Modelo de Caja */
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg);
 }
 
 .label {
     /* Display y Layout */
     display: block;
-
+    
     /* Tipografía */
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    color: #415841;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary-darker);
 }
 
 .base {
+    /* Display y Layout */
     display: block;
-
+    
+    /* Tamaños */
     width: 100%;
-    max-width: 400px;
+    max-width: var(--max-width-sm);
     
-    padding: 12px 16px;
+    /* Posicionamiento y Modelo de Caja */
+    padding: var(--spacing-xl) var(--spacing-2xl);
     
-    background-color: #F6F8F6;
-    border: 1px solid #dce5dc;
-    border-radius: 6px;
+    /* Estilos Visuales */
+    background-color: var(--color-neutral-100);
+    border: var(--border-width-thin) solid var(--color-neutral-400);
+    border-radius: var(--border-radius-md);
     
-    font-family: inherit;
-    font-size: 16px;
-    color: #415841;
+    /* Tipografía */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--color-primary-darker);
     
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    /* Otros Estilos */
+    transition: border-color var(--transition-base), 
+                box-shadow var(--transition-base), 
+                background-color var(--transition-base);
     cursor: text;
 }
 
 .base:hover {
-    border-color: #c5d4c5;
-    background-color: #f0f4f0;
+    /* Estilos Visuales */
+    border-color: var(--color-neutral-500);
+    background-color: var(--color-neutral-200);
 }
 
 .base:focus {
-    border-color: #638863;
-    border: 1px solid #63886394;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(99, 136, 99, 0.1);
+    /* Estilos Visuales */
+    border-color: var(--color-primary-dark);
+    background-color: var(--color-neutral-50);
+    box-shadow: var(--shadow-focus-primary);
     outline: none;
 }
 
 .base:disabled {
-    background-color: #e8ede8;
+    /* Estilos Visuales */
+    background-color: var(--color-neutral-300);
+    opacity: var(--opacity-disabled);
+    
+    /* Otros Estilos */
     cursor: not-allowed;
-    opacity: 0.6;
 }
 
 .base::placeholder {
-    color: #a0b0a0;
+    /* Tipografía */
+    color: var(--color-neutral-600);
 }
 
 .error {
-    border-color: #dc3545;
-    background-color: #fff5f5;
+    /* Estilos Visuales */
+    border-color: var(--color-error);
+    background-color: var(--color-error-light);
 }
 
 .error:focus {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+    /* Estilos Visuales */
+    border-color: var(--color-error);
+    box-shadow: var(--shadow-focus-error);
 }
 
 .success {
-    border-color: #28a745;
-    background-color: #f0fff4;
+    /* Estilos Visuales */
+    border-color: var(--color-success);
+    background-color: var(--color-success-light);
 }
 
 .success:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+    /* Estilos Visuales */
+    border-color: var(--color-success);
+    box-shadow: var(--shadow-focus-success);
 }
 
 .errorContainer {
+    /* Display y Layout */
     display: flex;
     align-items: center;
-    gap: 5px;
+    
+    /* Posicionamiento y Modelo de Caja */
+    gap: var(--spacing-sm);
 }
 
 .errorLabel {
     /* Tipografía */
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    color: #dc3545;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-error);
 }
