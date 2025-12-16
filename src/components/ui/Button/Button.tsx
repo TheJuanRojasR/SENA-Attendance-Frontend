@@ -15,7 +15,7 @@ type ButtonType = "button" | "submit" | "reset";
 // Las propiedades estan opcionales para poderlos probar
 type ButtonProps = {
     variant? : ButtonVariant;
-    onClick? : React.ButtonHTMLAttributes<HTMLButtonElement>['onClick']
+    onClick : React.ButtonHTMLAttributes<HTMLButtonElement>['onClick']
     disabled? : boolean;
     children? : React.ReactNode;
     type? : ButtonType;

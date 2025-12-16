@@ -1,5 +1,9 @@
+import { Title } from "./components/ui/Title/Title";
+
 function App() {
-  // return ()
+  return (
+    <Title as="h1">Hola Mundo</Title>
+  );
 }
 
 export default App
