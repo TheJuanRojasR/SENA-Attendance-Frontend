@@ -1,0 +1,136 @@
+.container {
+    /* Display y Layout */
+    display: flex;
+    flex-direction: column;
+    
+    /* Posicionamiento y Modelo de Caja */
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg);
+}
+
+.label {
+    /* Display y Layout */
+    display: block;
+    
+    /* Tipografía */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary-darker);
+}
+
+.base {
+    /* Display y Layout */
+    display: block;
+    
+    /* Tamaños */
+    width: 100%;
+    max-width: var(--max-width-sm);
+    
+    /* Posicionamiento y Modelo de Caja */
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    padding-right: var(--spacing-3xl); /* Más espacio para la flecha personalizada */
+    
+    /* Estilos Visuales */
+    background-color: var(--color-neutral-100);
+    background-image: url('@/assets/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-lg) center; /* Más separada del borde */
+    background-size: 20px;
+    border: var(--border-width-thin) solid var(--color-neutral-400);
+    border-radius: var(--border-radius-md);
+    
+    /* Tipografía */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--color-primary-darker);
+    
+    /* Otros Estilos */
+    appearance: none; /* Elimina la flecha nativa */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border-color var(--transition-base), 
+                box-shadow var(--transition-base), 
+                background-color var(--transition-base);
+    cursor: pointer;
+}
+
+.base:hover {
+    /* Estilos Visuales */
+    border-color: var(--color-neutral-500);
+    background-color: var(--color-neutral-200);
+}
+
+.base:focus {
+    /* Estilos Visuales */
+    border-color: var(--color-primary-dark);
+    background-color: var(--color-neutral-50);
+    box-shadow: var(--shadow-focus-primary);
+    outline: none;
+}
+
+.base:disabled {
+    /* Estilos Visuales */
+    background-color: var(--color-neutral-300);
+    opacity: var(--opacity-disabled);
+    
+    /* Otros Estilos */
+    cursor: not-allowed;
+}
+
+.base option {
+    /* Estilos Visuales */
+    background-color: var(--color-neutral-50);
+    
+    /* Tipografía */
+    color: var(--color-primary-darker);
+    
+    /* Posicionamiento y Modelo de Caja */
+    padding: var(--spacing-md);
+}
+
+.base option:disabled {
+    /* Tipografía */
+    color: var(--color-neutral-600);
+}
+
+.isError {
+    /* Estilos Visuales */
+    border-color: var(--color-error);
+    background-color: var(--color-error-light);
+}
+
+.isError:focus {
+    /* Estilos Visuales */
+    border-color: var(--color-error);
+    box-shadow: var(--shadow-focus-error);
+}
+
+.isSuccess {
+    /* Estilos Visuales */
+    border-color: var(--color-success);
+    background-color: var(--color-success-light);
+}
+
+.isSuccess:focus {
+    /* Estilos Visuales */
+    border-color: var(--color-success);
+    box-shadow: var(--shadow-focus-success);
+}
+
+.errorContainer {
+    /* Display y Layout */
+    display: flex;
+    align-items: center;
+    
+    /* Posicionamiento y Modelo de Caja */
+    gap: var(--spacing-sm);
+}
+
+.errorLabel {
+    /* Tipografía */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-error);
+}

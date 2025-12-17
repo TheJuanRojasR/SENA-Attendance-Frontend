@@ -19,7 +19,8 @@ type InputProps = {
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;  // Por el momento no se para que funcionan
 }
 
-export function Input ({ id,
+export function Input ({ 
+    id,
     type, 
     name, 
     placeholder,
@@ -28,9 +29,8 @@ export function Input ({ id,
     isDisabled = false, 
     value, 
     error, 
-    onChange }: InputProps)
-    
-    {
+    onChange }: InputProps){
+        
     const hasError = Boolean(error);
     const inputClassName = hasError ? styles.error : styles.success ;
 
