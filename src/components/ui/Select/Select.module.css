@@ -5,7 +5,6 @@
     
     /* Posicionamiento y Modelo de Caja */
     gap: var(--spacing-md);
-    margin: var(--spacing-lg);
 }
 
 .label {

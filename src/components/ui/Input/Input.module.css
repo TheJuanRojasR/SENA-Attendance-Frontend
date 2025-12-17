@@ -5,7 +5,6 @@
     
     /* Posicionamiento y Modelo de Caja */
     gap: var(--spacing-md);
-    margin: var(--spacing-lg);
 }
 
 .label {
@@ -75,25 +74,25 @@
     color: var(--color-neutral-600);
 }
 
-.error {
+.isError {
     /* Estilos Visuales */
     border-color: var(--color-error);
     background-color: var(--color-error-light);
 }
 
-.error:focus {
+.isError:focus {
     /* Estilos Visuales */
     border-color: var(--color-error);
     box-shadow: var(--shadow-focus-error);
 }
 
-.success {
+.isSuccess {
     /* Estilos Visuales */
     border-color: var(--color-success);
     background-color: var(--color-success-light);
 }
 
-.success:focus {
+.isSuccess:focus {
     /* Estilos Visuales */
     border-color: var(--color-success);
     box-shadow: var(--shadow-focus-success);

@@ -1,4 +1,4 @@
 // Barrel
-export { AuthLayout } from "./AuthLayout";
+export * from "./AuthLayout";
 
 

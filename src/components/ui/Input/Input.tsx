@@ -15,7 +15,8 @@ type InputProps = {
     isRequired?: boolean;
     isDisabled?: boolean;
     value: string;
-    error?: string;
+    errorMessage?: string;
+    className?: string;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;  // Por el momento no se para que funcionan
 }
 
@@ -28,23 +29,24 @@ export function Input ({
     isRequired = true, 
     isDisabled = false, 
     value, 
-    error, 
+    errorMessage,
+    className,
     onChange }: InputProps){
         
-    const hasError = Boolean(error);
-    const inputClassName = hasError ? styles.error : styles.success ;
+    const hasError = Boolean(errorMessage);
+    const hasSuccess = !hasError && value !=='';
 
     return (
         <div className={styles.container}>
             {/* condicion && <Algo /> */}
             {label && (<label className={styles.label} htmlFor={id}>{label}</label>)}
 
-            <input className={`${styles.base} ${inputClassName}`} type={type} id={id} name={name} placeholder={placeholder} required={isRequired} disabled={isDisabled} value={value} onChange={onChange}/>
+            <input className={`${styles.base} ${hasError ? styles.isError : ''} ${hasSuccess ? styles.isSuccess : ''} ${className ?? ''}`} type={type} id={id} name={name} placeholder={placeholder} required={isRequired} disabled={isDisabled} value={value} onChange={onChange}/>
 
             {hasError && (
                 <div className={styles.errorContainer}>
                     <ErrorIcon />
-                    <p className={styles.errorLabel}>{error}</p>
+                    <p className={styles.errorLabel}>{errorMessage}</p>
                 </div>
             )}
         </div>

@@ -1,0 +1,48 @@
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-3xl);
+
+    width: 100%;
+}
+
+.loginHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.documentFields {
+    display: grid;
+    grid-template-columns: 38% 57%;
+    gap: 5%
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+
+    margin-top: var(--spacing-3xl);
+}
+
+.registerLink {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.prueba {
+    text-align: end;
+}
+
+@media (max-width: 600px) {
+    .documentFields {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    .loginForm {
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+}

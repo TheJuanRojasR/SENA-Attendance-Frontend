@@ -23,6 +23,9 @@ type TitleProps = {
      * @default 'h1'
      */
     as?: As;
+
+    id?: string;
+
     /**
      * Controls the visual size of the title.
      * Does not affect the rendered HTML element.
@@ -53,10 +56,10 @@ type TitleProps = {
  * </Title>
  * ```
  */
-export function Title ({ as = 'h1', size = 'lg', className ,children }: TitleProps) {
+export function Title ({ as = 'h1', id, size = 'lg', className ,children }: TitleProps) {
     const Element = as;
 
     return (
-        <Element className={`${styles.base} ${styles[size]} ${className}`}>{children}</Element>
+        <Element id={id} className={`${styles.base} ${styles[size]} ${className}`}>{children}</Element>
     );
 }
