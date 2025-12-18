@@ -23,9 +23,11 @@ type TitleProps = {
      * @default 'h1'
      */
     as?: As;
-
+    /**
+     * Unique identifier for the heading element.
+     * Useful for anchor links and aria-labelledby associations.
+     */
     id?: string;
-
     /**
      * Controls the visual size of the title.
      * Does not affect the rendered HTML element.
