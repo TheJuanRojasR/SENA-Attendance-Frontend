@@ -1,0 +1,111 @@
+.base {
+    /* Display y Layout */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Tamaños */
+    width: 100%;
+    max-width: var(--max-width-sm);
+    height: 48px;
+
+    /* Estilos Visuales */
+    border: none;
+    border-radius: var(--border-radius-md);
+
+    /* Tipografía */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+
+    /* Otros Estilos */
+    cursor: pointer;
+    transition: filter var(--transition-base), 
+                box-shadow var(--transition-base),
+                background-color var(--transition-base);
+}
+
+.base:disabled {
+    opacity: var(--opacity-disabled);
+    cursor: not-allowed;
+}
+
+.primary {
+    background-color: var(--color-primary);
+    color: var(--color-neutral-50);
+}
+
+.primary:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+.primary:active:not(:disabled) {
+    filter: brightness(0.9);
+}
+
+.secondary {
+    background-color: var(--color-success-light);
+    color: var(--color-primary);
+}
+
+.secondary:hover:not(:disabled) {
+    filter: brightness(0.95);
+}
+
+.secondary:active:not(:disabled) {
+    filter: brightness(0.85);
+}
+
+.offline {
+    background-color: var(--color-neutral-300);
+    color: var(--color-neutral-800);
+}
+
+.offline:hover:not(:disabled) {
+    filter: brightness(0.95);
+}
+
+.offline:active:not(:disabled) {
+    filter: brightness(0.9);
+}
+
+.ghost {
+    background-color: var(--color-neutral-50);
+    color: var(--color-black);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-neutral-300);
+}
+
+.ghost:hover:not(:disabled) {
+    box-shadow: var(--shadow-md);
+}
+
+.ghost:active:not(:disabled) {
+    box-shadow: var(--shadow-sm);
+}
+
+.warning {
+    background-color: var(--color-warning);
+    color: var(--color-neutral-50);
+}
+
+.warning:hover:not(:disabled) {
+    filter: brightness(0.95);
+}
+
+.warning:active:not(:disabled) {
+    filter: brightness(1.05);
+}
+
+.danger {
+    background-color: var(--color-error);
+    color: var(--color-neutral-50);
+}
+
+.danger:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+.danger:active:not(:disabled) {
+    filter: brightness(0.9);
+}

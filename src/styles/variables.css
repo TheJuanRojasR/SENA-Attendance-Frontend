@@ -18,11 +18,14 @@
   --color-neutral-400: #dce5dc;       /* Green-gray (borders) */
   --color-neutral-500: #c5d4c5;       /* Gray-green light (hover borders) */
   --color-neutral-600: #a0b0a0;       /* Gray (placeholder text) */
+  --color-neutral-700: #7f8f7f;       /* Darker gray-green (muted text) */
+  --color-neutral-800: #5f6f5f;       /* Dark gray-green (headings/icons) */
+  --color-neutral-900: #415841;       /* Very dark green-gray (strong text) */
   --color-black: #111811;       /* Almost black (titles) */
   
   /* Semantic Colors - Status */
   --color-success: #28a745;           /* Green success */
-  --color-success-light: #f0fff4;     /* Light green bg */
+  --color-success-light: #D1F5D1;     /* Light green bg */
   --color-error: #dc3545;             /* Red error */
   --color-error-light: #fff5f5;       /* Light red bg */
   --color-warning: #ffc107;           /* Yellow warning */

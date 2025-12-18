@@ -62,7 +62,8 @@ export function LoginPage () {
                 <Text variant='success' isBold className={styles.prueba}>
                     <a href="/forgot-password">¿Olvidaste tu contraseña?</a>
                 </Text>
-
+                
+                {/* Falta onClick */}
                 <Button onClick={() => {}}>Iniciar sesión</Button>
             </form>
 
