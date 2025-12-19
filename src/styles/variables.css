@@ -1,7 +1,3 @@
-/* ========================================
-   Design System - CSS Variables
-   ======================================== */
-
 :root {
   /* ============ Colors ============ */
   
@@ -26,10 +22,12 @@
   /* Semantic Colors - Status */
   --color-success: #28a745;           /* Green success */
   --color-success-light: #D1F5D1;     /* Light green bg */
-  --color-error: #dc3545;             /* Red error */
-  --color-error-light: #fff5f5;       /* Light red bg */
-  --color-warning: #ffc107;           /* Yellow warning */
+  --color-error: #b02a37;             /* Red error */
+  --color-error-light: #fde2e2;       /* Light red bg */
+  --color-warning: #b45309;           /* Yellow warning */
+  --color-warning-light: #fff9db;     /* Light yellow bg */
   --color-info: #17a2b8;              /* Blue info */
+  --color-info-light: #e6f7fa;        /* Light blue bg */
   
   /* ============ Spacing ============ */
   

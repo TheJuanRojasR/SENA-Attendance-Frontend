@@ -19,3 +19,4 @@ export * from '@/components/ui/Input/Input';
 export * from '@/components/ui/Select/Select'
 export * from '@/components/ui/Text/Text'
 export * from '@/components/ui/Title/Title'
+export * from '@/components/ui/Status/Status'
