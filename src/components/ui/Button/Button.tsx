@@ -2,7 +2,6 @@ import type React from "react";
 import styles from './Button.module.css'
 
 // Pendiente: Posiblemente creacion de prop para insertar un icono en el boton
-// Pendiente: Posiblemente creacion de prop para tamaño del boton
 
 /**
  * Available visual variants for the Button component.
@@ -15,6 +14,12 @@ type ButtonVariant = 'primary' | 'secondary' | 'offline' | 'ghost' | 'danger' | 
  * Controls form behavior when the button is clicked.
  */
 type ButtonType = "button" | "submit" | "reset";
+
+/**
+ * Available sizes for the Button component.
+ * Controls the height, padding, and font size of the button.
+ */
+type ButtonSize = 'sm' | 'md' | 'lg';
 
 /**
  * Props for the Button component.
@@ -43,7 +48,7 @@ type ButtonProps = {
      *
      * @default false
      */
-    disabled?: boolean;
+    isDisabled?: boolean;
     /**
      * Content to be rendered inside the button.
      * Can be text, icons, or any valid React node.
@@ -58,6 +63,20 @@ type ButtonProps = {
      * @default 'button'
      */
     type?: ButtonType;
+    /**
+     * Size of the button.
+     * - `sm`: Small (height 32px, small font)
+     * - `md`: Medium (height 40px, base font)
+     * - `lg`: Large (height 48px, large font)
+     *
+     * @default 'lg'
+     */
+    size?: ButtonSize;
+    /**
+     * Custom class name(s) for additional styling or overrides.
+     * Allows you to extend or override the default styles.
+     */
+    className?: string;
 };
 
 const variantClasses = {
@@ -87,9 +106,9 @@ const variantClasses = {
  * </Button>
  * ```
  */
-export function Button ({ variant = 'primary', onClick, disabled = false, children, type = 'button' }: ButtonProps) {
+export function Button ({ variant = 'primary', onClick, isDisabled = false, children, type = 'button', size = 'lg', className }: ButtonProps) {
     return (
-        <button className={`${styles.base} ${variantClasses[variant]}`} onClick={onClick} disabled={disabled} type={type}>
+        <button className={`${styles.base} ${variantClasses[variant]} ${styles[size]} ${className ?? ''}`} onClick={onClick} disabled={isDisabled} type={type}>
             {children}
         </button>
     );
