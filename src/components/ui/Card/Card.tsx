@@ -1,4 +1,4 @@
-// import styles from './Card.module.css'
+import styles from './Card.module.css'
 import { Title, Status, Text, Button } from '@/components';
 import type React from 'react';
 
@@ -9,7 +9,7 @@ const CARD_SCHEDULE = {
     evening: 'L-V 06:00 p.m. – 10:00 p.m.',
     overnight: 'L-V 10:00 p.m. – 06:00 a.m.',
     mixed: 'L-V 06:00 p.m. – 10:00 p.m. S-D 06:00 a.m. – 06:00 p.m.',
-    weekend: 'S-D 06:00 a.m. y 06:00 p.m.',
+    weekend: 'S-D 06:00 a.m. - 06:00 p.m.',
 } as const;
 
 type CardShift = keyof typeof CARD_SCHEDULE;
@@ -47,15 +47,18 @@ export function Card ({ id, title, status, code, schedule, onActionClick, action
     const statusConfig = CARD_STATUS[status]; 
     const scheduleConfig = CARD_SCHEDULE[schedule];
 
+    const titleId = `card-title-${id}`;
+    const descriptionId = `card-desc-${id}`;
+
     return (
-        <article aria-labelledby={`card-title-${id}`} className={`${className ?? ''}`}>
-            <header>
-                <Title as='h3' id={`card-title-${id}`} size='sm'>{title}</Title>
+        <article aria-labelledby={titleId} aria-describedby={descriptionId} className={`${styles.card} ${className ?? ''}`}>
+            <header className={styles.header}>
+                <Title as='h3' id={titleId} size='sm' className={styles.title}>{title}</Title>
                 <Status variant={statusConfig.variant}>
                     {statusConfig.label}
                 </Status>
             </header>
-            <div>
+            <div aria-describedby={descriptionId}>
                 <Text as='p'>
                     Código: {code}
                 </Text>
@@ -64,7 +67,7 @@ export function Card ({ id, title, status, code, schedule, onActionClick, action
                 </Text>
             </div>
             <footer>
-                <Button onClick={onActionClick} isDisabled={isActionDisabled} variant={isActionDisabled ? 'offline' : 'secondary'} size='sm'>
+                <Button onClick={onActionClick} isDisabled={isActionDisabled} variant={isActionDisabled ? 'offline' : 'secondary'} size='md'>
                     {actionLabel}
                 </Button>
             </footer>
