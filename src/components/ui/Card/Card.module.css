@@ -1,0 +1,61 @@
+.card {
+    /* Display y Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* Tamaños */
+    width: 100%;
+    max-width: var(--max-width-xs);
+    min-width: 300px;
+    min-height: 230px;
+
+    /* Posicionamiento y Modelo de Caja */
+    padding: var(--spacing-4xl);
+
+    /* Estilos Visuales */
+    background-color: #ffffff;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-sm);
+
+    /* Otros Estilos */
+    transition: box-shadow 0.2s cubic-bezier(0.4,0,0.2,1), transform 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+
+.card:hover {
+    /* Estados Especiales */
+    box-shadow: var(--shadow-lg), var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+
+.header {
+    /* Display y Layout */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.title {
+    /* Tamaños */
+    height: 50px;
+
+    /* Posicionamiento y Modelo de Caja */
+    overflow: hidden;
+
+    /* Tipografía */
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+    .card {
+    gap: 10px;
+    min-width: 320px;
+    max-width: 100%;
+    height: auto;
+    padding: var(--spacing-lg);
+    }
+}

@@ -47,15 +47,15 @@
   --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
   
 /* Font Sizes */
---font-size-xs: 0.75rem;            /* Extra small */
---font-size-sm: 0.875rem;           /* Small */
---font-size-base: 1rem;             /* Base/Medium */
---font-size-lg: 1.125rem;           /* Large */
---font-size-xl: 1.25rem;            /* Extra large */
---font-size-2xl: 1.5rem;            /* 2X large */
---font-size-3xl: 1.875rem;          /* 3X large */
---font-size-4xl: 2.25rem;           /* 4X large */
---font-size-5xl: 3rem;              /* 5X large */
+  --font-size-xs: 0.75rem;            /* Extra small */
+  --font-size-sm: 0.875rem;           /* Small */
+  --font-size-base: 1rem;             /* Base/Medium */
+  --font-size-lg: 1.125rem;           /* Large */
+  --font-size-xl: 1.25rem;            /* Extra large */
+  --font-size-2xl: 1.5rem;            /* 2X large */
+  --font-size-3xl: 1.875rem;          /* 3X large */
+  --font-size-4xl: 2.25rem;           /* 4X large */
+  --font-size-5xl: 3rem;              /* 5X large */
   
   /* Font Weights */
   --font-weight-normal: 400;          /* Normal */
