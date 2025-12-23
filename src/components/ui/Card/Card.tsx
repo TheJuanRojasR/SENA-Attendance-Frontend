@@ -64,7 +64,7 @@ export function Card ({ id, title, status, code, schedule, onActionClick, action
                 </Text>
             </div>
             <footer>
-                <Button onClick={onActionClick} isDisabled={isActionDisabled} variant={isActionDisabled ? 'offline' : 'secondary'}>
+                <Button onClick={onActionClick} isDisabled={isActionDisabled} variant={isActionDisabled ? 'offline' : 'secondary'} size='sm'>
                     {actionLabel}
                 </Button>
             </footer>

@@ -7,7 +7,7 @@
     /* Tamaños */
     width: 100%;
     max-width: var(--max-width-sm);
-    height: 48px;
+    /* El alto y padding ahora se definen por tamaño (sm, md, lg) */
 
     /* Estilos Visuales */
     border: none;
@@ -23,6 +23,23 @@
     transition: filter var(--transition-base), 
                 box-shadow var(--transition-base),
                 background-color var(--transition-base);
+}
+
+/* Tamaños de botón */
+.sm {
+    height: 32px;
+    padding: 0 12px;
+    font-size: var(--font-size-sm);
+}
+
+.md {
+    height: 40px;
+    padding: 0 20px;
+}
+
+.lg {
+    height: 48px;
+    padding: 0 28px;
 }
 
 .base:disabled {
