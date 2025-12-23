@@ -71,7 +71,7 @@ type InputProps = {
      * Called when the input value changes.
      * Use `event.target.value` to get the new value.
      */
-    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 /**

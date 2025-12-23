@@ -43,7 +43,7 @@ type ButtonProps = {
      *
      * @default false
      */
-    disabled?: boolean;
+    isDisabled?: boolean;
     /**
      * Content to be rendered inside the button.
      * Can be text, icons, or any valid React node.
@@ -87,9 +87,9 @@ const variantClasses = {
  * </Button>
  * ```
  */
-export function Button ({ variant = 'primary', onClick, disabled = false, children, type = 'button' }: ButtonProps) {
+export function Button ({ variant = 'primary', onClick, isDisabled = false, children, type = 'button' }: ButtonProps) {
     return (
-        <button className={`${styles.base} ${variantClasses[variant]}`} onClick={onClick} disabled={disabled} type={type}>
+        <button className={`${styles.base} ${variantClasses[variant]}`} onClick={onClick} disabled={isDisabled} type={type}>
             {children}
         </button>
     );

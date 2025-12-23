@@ -60,7 +60,7 @@ type StatusProps = {
  * // With custom className
  * <Status variant="rejected" size="lg" className="my-custom-class">Rechazado</Status>
  */
-export function Status ({ variant, size = 'md', children, className }: StatusProps) {
+export function Status ({ variant, size = 'sm', children, className }: StatusProps) {
     return (
         <span className={`${styles.base} ${styles[variant]} ${styles[size]} ${className ?? ''}`}>
             {children}
